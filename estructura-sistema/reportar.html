@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Incidente</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Help Desk UTM</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="reportar.html">Reportar Incidente</a></li>
+        <li><a href="tickets.html">Tickets</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<section>
+
+<article>
+
+<h2>Formulario de Registro de Incidentes</h2>
+
+<form action="#" method="post">
+
+    <label for="titulo">Título del Incidente:</label>
+    <input type="text" id="titulo" name="titulo" required>
+
+    <label for="categoria">Categoría:</label>
+    <select id="categoria" name="categoria" required>
+        <option value="">Seleccione</option>
+        <option value="red">Red</option>
+        <option value="hardware">Hardware</option>
+        <option value="software">Software</option>
+    </select>
+
+    <fieldset>
+        <legend>Prioridad</legend>
+
+        <input type="radio" id="alta" name="prioridad" value="Alta">
+        <label for="alta">Alta</label>
+
+        <input type="radio" id="media" name="prioridad" value="Media">
+        <label for="media">Media</label>
+
+        <input type="radio" id="baja" name="prioridad" value="Baja">
+        <label for="baja">Baja</label>
+    </fieldset>
+
+    <label for="descripcion">
+        Descripción Detallada:
+    </label>
+
+    <textarea id="descripcion"
+              name="descripcion"
+              rows="6"
+              required>
+    </textarea>
+
+    <button type="submit">
+        Registrar Incidente
+    </button>
+
+</form>
+
+</article>
+
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Help Desk UTM</p>
+</footer>
+
+</body>
+</html>
