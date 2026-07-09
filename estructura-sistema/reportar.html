@@ -3,83 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reportar Incidente</title>
-    <link rel="stylesheet" href="assets/css/estilos.css">
+    <title>Help Desk UTM - Reportar Incidente</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>Help Desk UTM</h1>
-</header>
+    <header class="app-header">
+        <h1>Help Desk UTM</h1>
+        <p>Sistema de gestión de incidencias tecnológicas</p>
+    </header>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="reportar.html">Reportar Incidente</a></li>
-        <li><a href="tickets.html">Tickets</a></li>
-    </ul>
-</nav>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html" class="active">Reportar Incidente</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+        </ul>
+    </nav>
 
-<main>
+    <main class="page-container">
 
-<section>
+        <section class="section-card">
+            <div class="section-header">
+                <h2>Formulario de Registro de Incidentes</h2>
+                <p>
+                    Complete los datos solicitados para registrar una nueva incidencia dentro del sistema Help Desk.
+                </p>
+            </div>
 
-<article>
+            <form class="form-layout" action="#" method="post">
 
-<h2>Formulario de Registro de Incidentes</h2>
+                <div class="form-group">
+                    <label for="titulo">Título del Incidente</label>
+                    <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Ej. Error al iniciar sesión" required>
+                </div>
 
-<form action="#" method="post">
+                <div class="form-group">
+                    <label for="categoria">Categoría</label>
+                    <select id="categoria" name="categoria" class="form-control" required>
+                        <option value="">Seleccione una categoría</option>
+                        <option value="red">Red</option>
+                        <option value="hardware">Hardware</option>
+                        <option value="software">Software</option>
+                    </select>
+                </div>
 
-    <label for="titulo">Título del Incidente:</label>
-    <input type="text" id="titulo" name="titulo" required>
+                <fieldset class="priority-box">
+                    <legend>Prioridad</legend>
 
-    <label for="categoria">Categoría:</label>
-    <select id="categoria" name="categoria" required>
-        <option value="">Seleccione</option>
-        <option value="red">Red</option>
-        <option value="hardware">Hardware</option>
-        <option value="software">Software</option>
-    </select>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="prioridad" value="Alta">
+                            <span class="badge badge-high">Alta</span>
+                        </label>
 
-    <fieldset>
-        <legend>Prioridad</legend>
+                        <label>
+                            <input type="radio" name="prioridad" value="Media">
+                            <span class="badge badge-medium">Media</span>
+                        </label>
 
-        <input type="radio" id="alta" name="prioridad" value="Alta">
-        <label for="alta">Alta</label>
+                        <label>
+                            <input type="radio" name="prioridad" value="Baja">
+                            <span class="badge badge-low">Baja</span>
+                        </label>
+                    </div>
+                </fieldset>
 
-        <input type="radio" id="media" name="prioridad" value="Media">
-        <label for="media">Media</label>
+                <div class="form-group full">
+                    <label for="descripcion">Descripción Detallada</label>
+                    <textarea id="descripcion" name="descripcion" rows="6" class="form-control" placeholder="Describa el problema presentado..." required></textarea>
+                </div>
 
-        <input type="radio" id="baja" name="prioridad" value="Baja">
-        <label for="baja">Baja</label>
-    </fieldset>
+                <button type="submit" class="btn btn-primary">Registrar Incidente</button>
 
-    <label for="descripcion">
-        Descripción Detallada:
-    </label>
+            </form>
+        </section>
 
-    <textarea id="descripcion"
-              name="descripcion"
-              rows="6"
-              required>
-    </textarea>
+    </main>
 
-    <button type="submit">
-        Registrar Incidente
-    </button>
-
-</form>
-
-</article>
-
-</section>
-
-</main>
-
-<footer>
-    <p>© 2026 Help Desk UTM</p>
-</footer>
+    <footer>
+        <p>© 2026 Help Desk UTM | Desarrollo de Sistemas Informáticos</p>
+    </footer>
 
 </body>
 </html>

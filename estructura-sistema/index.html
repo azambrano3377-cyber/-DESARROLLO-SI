@@ -1,62 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help Desk - Inicio</title>
-    <link rel="stylesheet" href="assets/css/estilos.css">
+    <title>Help Desk UTM - Inicio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-    <header>
-        <div class="logo">
-            <h1>Help Desk UTM</h1>
-        </div>
+    <header class="app-header">
+        <h1>Help Desk UTM</h1>
+        <p>Sistema de gestión de incidencias tecnológicas</p>
     </header>
 
-    <nav>
+    <nav class="navbar">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html" class="active">Inicio</a></li>
             <li><a href="reportar.html">Reportar Incidente</a></li>
             <li><a href="tickets.html">Tickets</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main class="page-container">
 
-        <section>
-            <article>
+        <section class="section-card">
+            <div class="section-header">
                 <h2>Bienvenido al Sistema Help Desk</h2>
-
                 <p>
-                    Plataforma destinada a la gestión y seguimiento de incidencias
+                    Plataforma destinada a la gestión, registro y seguimiento de incidencias
                     tecnológicas reportadas por los usuarios.
                 </p>
+            </div>
 
-                <p>
-                    Desde este sistema podrá registrar incidentes, visualizar
-                    tickets y dar seguimiento a las solicitudes de soporte.
-                </p>
-            </article>
+            <p class="content-text">
+                Desde este sistema podrá registrar incidentes, visualizar tickets y dar
+                seguimiento a las solicitudes de soporte de manera rápida, ordenada e intuitiva.
+            </p>
         </section>
 
-        <section class="dashboard">
+        <section class="dashboard-grid">
 
-            <article>
+            <article class="dashboard-card">
+                <span class="card-label">Total</span>
                 <h3>Tickets Registrados</h3>
-                <p>25</p>
+                <p class="dashboard-number">25</p>
             </article>
 
-            <article>
+            <article class="dashboard-card">
+                <span class="card-label">Activos</span>
                 <h3>En Proceso</h3>
-                <p>10</p>
+                <p class="dashboard-number">10</p>
             </article>
 
-            <article>
+            <article class="dashboard-card">
+                <span class="card-label">Finalizados</span>
                 <h3>Resueltos</h3>
-                <p>15</p>
+                <p class="dashboard-number">15</p>
             </article>
 
         </section>
@@ -68,5 +67,4 @@
     </footer>
 
 </body>
-
 </html>

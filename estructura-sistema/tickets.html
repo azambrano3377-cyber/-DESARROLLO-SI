@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de Tickets</title>
-    <link rel="stylesheet" href="assets/css/estilos.css">
+    <title>Help Desk UTM - Tickets</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-    <header>
+    <header class="app-header">
         <h1>Help Desk UTM</h1>
+        <p>Sistema de gestión de incidencias tecnológicas</p>
     </header>
 
-    <nav>
+    <nav class="navbar">
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="reportar.html">Reportar Incidente</a></li>
-            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="tickets.html" class="active">Tickets</a></li>
         </ul>
     </nav>
 
-    <main>
+    <main class="page-container">
 
-        <section>
+        <section class="section-card">
 
-            <article>
+            <div class="section-header">
+                <h2>Listado de Tickets</h2>
+                <p>
+                    Consulte los incidentes registrados y su estado actual dentro del sistema.
+                </p>
+            </div>
 
-                <h2>Tickets Registrados</h2>
+            <div class="table-container">
 
-                <table>
+                <table class="table-ui">
 
                     <thead>
+
                         <tr>
                             <th>ID</th>
                             <th>Título</th>
@@ -40,6 +45,7 @@
                             <th>Prioridad</th>
                             <th>Estado</th>
                         </tr>
+
                     </thead>
 
                     <tbody>
@@ -48,40 +54,85 @@
                             <td>001</td>
                             <td>Falla de Internet</td>
                             <td>Red</td>
-                            <td>Alta</td>
-                            <td>Abierto</td>
+                            <td>
+                                <span class="badge badge-high">Alta</span>
+                            </td>
+                            <td>
+                                <span class="status status-open">
+                                    Abierto
+                                </span>
+                            </td>
                         </tr>
 
                         <tr>
                             <td>002</td>
                             <td>Computador no enciende</td>
                             <td>Hardware</td>
-                            <td>Media</td>
-                            <td>En Proceso</td>
+                            <td>
+                                <span class="badge badge-medium">Media</span>
+                            </td>
+                            <td>
+                                <span class="status status-progress">
+                                    En proceso
+                                </span>
+                            </td>
                         </tr>
 
                         <tr>
                             <td>003</td>
-                            <td>Error en Sistema Académico</td>
+                            <td>Error Sistema Académico</td>
                             <td>Software</td>
-                            <td>Alta</td>
-                            <td>Resuelto</td>
+                            <td>
+                                <span class="badge badge-high">Alta</span>
+                            </td>
+                            <td>
+                                <span class="status status-success">
+                                    Resuelto
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>004</td>
+                            <td>Impresora sin conexión</td>
+                            <td>Hardware</td>
+                            <td>
+                                <span class="badge badge-low">Baja</span>
+                            </td>
+                            <td>
+                                <span class="status status-open">
+                                    Abierto
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>005</td>
+                            <td>Error de autenticación</td>
+                            <td>Software</td>
+                            <td>
+                                <span class="badge badge-medium">Media</span>
+                            </td>
+                            <td>
+                                <span class="status status-progress">
+                                    En proceso
+                                </span>
+                            </td>
                         </tr>
 
                     </tbody>
 
                 </table>
 
-            </article>
+            </div>
 
         </section>
 
     </main>
 
     <footer>
-        <p>© 2026 Help Desk UTM</p>
+        <p>© 2026 Help Desk UTM | Desarrollo de Sistemas Informáticos</p>
     </footer>
 
 </body>
-
 </html>
