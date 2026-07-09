@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="hero">
+    <h1>Biblioteca de Componentes</h1>
+    <p>
+        Design System creado para mantener una interfaz moderna,
+        intuitiva y reutilizable en el sistema de gestión de incidentes.
+    </p>
+</header>
+
+<main class="ui-container">
+
+    <section class="section-card">
+        <div class="section-header">
+            <h2>Botones</h2>
+            <p>Componentes de acción para guardar, cancelar o eliminar información.</p>
+        </div>
+
+        <div class="component-group">
+            <button class="btn btn-primary">Guardar ticket</button>
+            <button class="btn btn-secondary">Cancelar</button>
+            <button class="btn btn-danger">Eliminar</button>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <div class="section-header">
+            <h2>Formularios</h2>
+            <p>Campos diseñados para registrar información de incidentes de forma clara.</p>
+        </div>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Título del incidente</label>
+                <input type="text" class="form-control" placeholder="Ej. Error al iniciar sesión">
+            </div>
+
+            <div class="form-group">
+                <label>Prioridad</label>
+                <select class="form-control">
+                    <option>Seleccione una prioridad</option>
+                    <option>Alta</option>
+                    <option>Media</option>
+                    <option>Baja</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <div class="section-header">
+            <h2>Tarjetas de Tickets</h2>
+            <p>Contenedores visuales para presentar incidencias de manera organizada.</p>
+        </div>
+
+        <div class="ticket-grid">
+            <article class="ticket-card">
+                <div class="ticket-top">
+                    <span class="ticket-id">Ticket #1025</span>
+                    <span class="badge badge-high">Alta</span>
+                </div>
+
+                <h3>No se puede acceder al sistema</h3>
+
+                <p>
+                    El usuario reporta problemas al iniciar sesión en la plataforma institucional.
+                </p>
+
+                <button class="btn btn-primary">Ver detalle</button>
+            </article>
+
+            <article class="ticket-card">
+                <div class="ticket-top">
+                    <span class="ticket-id">Ticket #1026</span>
+                    <span class="badge badge-medium">Media</span>
+                </div>
+
+                <h3>Lentitud en el módulo de reportes</h3>
+
+                <p>
+                    El sistema demora varios segundos en cargar los reportes solicitados.
+                </p>
+
+                <button class="btn btn-secondary">Revisar</button>
+            </article>
+
+            <article class="ticket-card">
+                <div class="ticket-top">
+                    <span class="ticket-id">Ticket #1027</span>
+                    <span class="badge badge-low">Baja</span>
+                </div>
+
+                <h3>Solicitud de actualización de datos</h3>
+
+                <p>
+                    El usuario solicita modificar información básica de su perfil.
+                </p>
+
+                <button class="btn btn-secondary">Atender</button>
+            </article>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <div class="section-header">
+            <h2>Badges de Prioridad</h2>
+            <p>Etiquetas visuales para identificar rápidamente el nivel de urgencia.</p>
+        </div>
+
+        <div class="component-group">
+            <span class="badge badge-high">Alta</span>
+            <span class="badge badge-medium">Media</span>
+            <span class="badge badge-low">Baja</span>
+        </div>
+    </section>
+
+</main>
+</body>
+</html>
