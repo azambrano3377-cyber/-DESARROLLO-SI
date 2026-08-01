@@ -1,8 +1,14 @@
 const pool = require('../config/database');
 
+const xss = require('xss');
+
 const categoriasPermitidas = ['Red', 'Hardware', 'Software'];
 const prioridadesPermitidas = ['Alta', 'Media', 'Baja'];
 const estadosPermitidos = ['Abierto', 'En Progreso', 'Cerrado'];
+
+function sanitizarTexto(texto) {
+  return xss(texto.trim());
+}
 
 /**
  * GET /tickets
@@ -111,8 +117,8 @@ const crearTicket = async (req, res) => {
        VALUES ($1, $2, $3, $4, $5)
        RETURNING *`,
       [
-        titulo.trim(),
-        descripcion.trim(),
+        sanitizarTexto(titulo),
+        sanitizarTexto(descripcion),
         categoria,
         prioridad,
         estado
@@ -194,8 +200,8 @@ const actualizarTicket = async (req, res) => {
        WHERE id = $6
        RETURNING *`,
       [
-        titulo.trim(),
-        descripcion.trim(),
+        sanitizarTexto(titulo),
+        sanitizarTexto(descripcion),
         categoria,
         prioridad,
         estado,
